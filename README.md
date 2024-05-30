@@ -77,7 +77,7 @@ Join("GalacticRoom")
 Send a test message to the joined channel:
 
 
-Say("Hello, anybody here?", "GalacticRoom")
+Say("Hello, can anyone hear me?", "GalacticRoom")
 
 
 ### Step 4: Start the WebSocket Server
