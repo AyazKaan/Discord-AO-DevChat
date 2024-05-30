@@ -1,5 +1,5 @@
   <pre>
-
+<marquee>
 # InterstellarChat Relay Bot
 
 InterstellarChat Relay Bot is a fun and interactive bot designed 
@@ -118,7 +118,7 @@ Send a message in the specified Discord channel and check if it gets relayed to 
 
 - `!joke`: Get a random joke.
 - `!quote`: Get a random motivational quote.
-
+</marquee>
 <div style="text-align: center;">
   <pre>
           _____                   _______                   _____
