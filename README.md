@@ -52,8 +52,11 @@ Load the required Lua scripts in the AOS terminal:
 
 
 .load /root/InterstellarChatRelayBot/src/router.lua
+
 .load /root/InterstellarChatRelayBot/src/client.lua
+
 .load /root/InterstellarChatRelayBot/src/chatroom.lua
+
 .load /root/InterstellarChatRelayBot/src/process.lua
 
 
