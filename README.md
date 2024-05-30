@@ -1,5 +1,5 @@
   <pre>
-<div style="word-wrap: break-word;">
+
 # InterstellarChat Relay Bot
 
 InterstellarChat Relay Bot is a fun and interactive bot designed 
@@ -67,9 +67,9 @@ Load the required Lua scripts in the AOS terminal:
 
 Register the channel by sending a message to the router:
 
-
+<div style="word-wrap: break-word;">
 ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "GalacticRoom" })
-
+</div>
 Join("GalacticRoom")
 
 
@@ -119,7 +119,7 @@ Send a message in the specified Discord channel and check if it gets relayed to 
 
 - `!joke`: Get a random joke.
 - `!quote`: Get a random motivational quote.
-</div>
+
 <div style="text-align: center;">
   <pre>
           _____                   _______                   _____
