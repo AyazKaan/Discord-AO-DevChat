@@ -49,11 +49,11 @@ It also includes rate limiting and command handling for a better user experience
 Load the required Lua scripts in the AOS terminal:
 
 
-`.load /root/InterstellarChatRelayBot/src/router.lua`
+`.load /root/router.lua`
 
-`.load /root/InterstellarChatRelayBot/src/client.lua`
+`.load /root/client.lua`
 
-`.load /root/InterstellarChatRelayBot/src/chatroom.lua`
+`.load /root/chatroom.lua`
 
 
 ### Register and Join the Channel
