@@ -1,5 +1,3 @@
-
-<div style="word-wrap: break-word;">
 ## InterstellarChat Relay Bot
 
 
