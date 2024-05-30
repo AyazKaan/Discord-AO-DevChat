@@ -27,10 +27,11 @@ InterstellarChat Relay Bot is a fun and interactive bot designed to relay messag
 
 
    DISCORD_BOT_TOKEN=your-discord-bot-token
+   
    DISCORD_CHANNEL_ID=your-discord-channel-id
 
 
-3. Ensure your wallet file is located at `/root/.aos.json`.
+4. Ensure your wallet file is located at `/root/.aos.json`.
 
 ## Project Structure
 
@@ -51,6 +52,7 @@ InterstellarChat Relay Bot is a fun and interactive bot designed to relay messag
 Load the required Lua scripts in the AOS terminal:
 
 
+
 .load /root/InterstellarChatRelayBot/src/router.lua
 
 .load /root/InterstellarChatRelayBot/src/client.lua
@@ -66,6 +68,7 @@ Register the channel by sending a message to the router:
 
 
 ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "GalacticRoom" })
+
 Join("GalacticRoom")
 
 
