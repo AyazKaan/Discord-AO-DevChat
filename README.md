@@ -137,7 +137,8 @@ Send a message in the specified Discord channel and check if it gets relayed to 
         \::/    /                 ~~                      \::/    /
          \/____/                                           \/____/
 </pre>
-
-chat PID: NAFg0T-grGsqyV1neCV9nPwbNU5d5qXx0ZCpoxmClh8
-main PID: RJo-aiH2TopYr-zLreGuO88b7HN0sauxox7_NbYM1I4
 </div>
+chat PID: NAFg0T-grGsqyV1neCV9nPwbNU5d5qXx0ZCpoxmClh8
+
+main PID: RJo-aiH2TopYr-zLreGuO88b7HN0sauxox7_NbYM1I4
+
