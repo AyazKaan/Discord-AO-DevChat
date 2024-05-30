@@ -48,7 +48,7 @@ It also includes rate limiting and command handling for a better user experience
 
 ## Setup and Usage
 
-### Step 1: Start the Lua Scripts
+###Start the Lua Scripts
 
 Load the required Lua scripts in the AOS terminal:
 
