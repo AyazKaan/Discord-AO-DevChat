@@ -1,6 +1,6 @@
 
 <div style="word-wrap: break-word;">
-# InterstellarChat Relay Bot
+## InterstellarChat Relay Bot
 
 
 InterstellarChat Relay Bot is a fun and interactive bot designed 
