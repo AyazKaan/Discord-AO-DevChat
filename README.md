@@ -46,10 +46,7 @@ It also includes rate limiting and command handling for a better user experience
 
 ## Setup and Usage
 
-###Start the Lua Scripts
-
 Load the required Lua scripts in the AOS terminal:
-
 
 
 `.load /root/InterstellarChatRelayBot/src/router.lua`
