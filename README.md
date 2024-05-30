@@ -29,7 +29,6 @@ InterstellarChat Relay Bot is a fun and interactive bot designed to relay messag
 
 
    DISCORD_BOT_TOKEN=your-discord-bot-token
-   
    DISCORD_CHANNEL_ID=your-discord-channel-id
 
 
@@ -79,7 +78,7 @@ Join("GalacticRoom")
 Send a test message to the joined channel:
 
 
-Say("Hello, this is a test message.", "GalacticRoom")
+Say("Hello, anybody here?", "GalacticRoom")
 
 
 ### Step 4: Start the WebSocket Server
