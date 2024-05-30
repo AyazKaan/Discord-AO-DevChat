@@ -4,7 +4,7 @@ InterstellarChat Relay Bot is a fun and interactive bot designed to relay messag
 
 ## Features
 
-- Relay messages between InterstellarChat and Discord
+- Relay messages between GalacticRoom and Discord
 - Rate limiting to prevent spam
 - Fun and interactive commands like `!joke` and `!quote`
 - Themed logging and messages for an engaging experience
