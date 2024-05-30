@@ -26,7 +26,7 @@ async function fetchMessagesFromInterstellarChat() {
       console.log('✨ Initial results fetched:', formatResult(initialResults));
     }
 
-    console.log('🚀 Fetching messages from InterstellarChat...');
+    console.log('🔍 Fetching messages from InterstellarChat...');
     const newResults = await results({
       process: 'NAFg0T-grGsqyV1neCV9nPwbNU5d5qXx0ZCpoxmClh8',
       from: lastMarker,
