@@ -2,6 +2,7 @@
 <div style="word-wrap: break-word;">
 # InterstellarChat Relay Bot
 
+
 InterstellarChat Relay Bot is a fun and interactive bot designed 
 to relay messages between a native chatroom and a Discord server.
 It also includes rate limiting and command handling for a better user experience.
@@ -25,7 +26,7 @@ It also includes rate limiting and command handling for a better user experience
 1. Install the required npm packages:
 
 
-   npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit
+  ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit`
 
 
 2. Create a `.env` file in the root directory with your Discord bot token and channel ID:
@@ -55,11 +56,11 @@ Load the required Lua scripts in the AOS terminal:
 
 
 
-.load /root/InterstellarChatRelayBot/src/router.lua
+`.load /root/InterstellarChatRelayBot/src/router.lua`
 
-.load /root/InterstellarChatRelayBot/src/client.lua
+`.load /root/InterstellarChatRelayBot/src/client.lua`
 
-.load /root/InterstellarChatRelayBot/src/chatroom.lua
+`.load /root/InterstellarChatRelayBot/src/chatroom.lua`
 
 
 ### Step 2: Register and Join the Channel
@@ -67,9 +68,9 @@ Load the required Lua scripts in the AOS terminal:
 Register the channel by sending a message to the router:
 
 
-ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "GalacticRoom" })
+`ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "GalacticRoom" })`
 
-Join("GalacticRoom")
+`Join("GalacticRoom")`
 
 
 ### Step 3: Send a Test Message
@@ -77,7 +78,7 @@ Join("GalacticRoom")
 Send a test message to the joined channel:
 
 
-Say("Hello, can anyone hear me?", "GalacticRoom")
+`Say("Hello, can anyone hear me?", "GalacticRoom")`
 
 
 ### Step 4: Start the WebSocket Server
@@ -85,7 +86,7 @@ Say("Hello, can anyone hear me?", "GalacticRoom")
 Run the `server.js` script to start the WebSocket server and log in the Discord bot:
 
 
-node server.js
+`node server.js`
 
 
 ### Step 5: Start Capturing Messages from InterstellarChat
@@ -93,7 +94,7 @@ node server.js
 Run the `messageCapture.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
 
 
-node messageCapture.js
+`node messageCapture.js`
 
 
 ### Step 6: Test the Setup
@@ -103,7 +104,7 @@ node messageCapture.js
 Use the `Say` command in InterstellarChat to send a message to a room:
 
 
-Say("Hello, this is a test message.", "GalacticRoom")
+`Say("Hello, this is a test message.", "GalacticRoom")`
 
 
 #### Receiving the Message in Discord
