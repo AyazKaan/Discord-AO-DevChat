@@ -36,8 +36,6 @@ It also includes rate limiting and command handling for a better user experience
 
 4. Ensure your wallet file is located at `/root/.aos.json`.
 
-## Project Structure
-
 <pre>/root/InterstellarChatRelayBot/src/
 |-- server.js
 |-- messageCapture.js
@@ -61,7 +59,7 @@ Load the required Lua scripts in the AOS terminal:
 `.load /root/InterstellarChatRelayBot/src/chatroom.lua`
 
 
-### Step 2: Register and Join the Channel
+### Register and Join the Channel
 
 Register the channel by sending a message to the router:
 
@@ -71,7 +69,7 @@ Register the channel by sending a message to the router:
 `Join("GalacticRoom")`
 
 
-### Step 3: Send a Test Message
+### Send a Test Message
 
 Send a test message to the joined channel:
 
@@ -79,7 +77,7 @@ Send a test message to the joined channel:
 `Say("Hello, can anyone hear me?", "GalacticRoom")`
 
 
-### Step 4: Start the WebSocket Server
+### Start the WebSocket Server
 
 Run the `server.js` script to start the WebSocket server and log in the Discord bot:
 
@@ -87,7 +85,7 @@ Run the `server.js` script to start the WebSocket server and log in the Discord 
 `node server.js`
 
 
-### Step 5: Start Capturing Messages from InterstellarChat
+### Start Capturing Messages from InterstellarChat
 
 Run the `messageCapture.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
 
@@ -95,7 +93,7 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 `node messageCapture.js`
 
 
-### Step 6: Test the Setup
+### Test the Setup
 
 #### Sending a Message from InterstellarChat
 
