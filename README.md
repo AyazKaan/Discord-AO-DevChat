@@ -2,7 +2,9 @@
 
 # InterstellarChat Relay Bot
 
-InterstellarChat Relay Bot is a fun and interactive bot designed to relay messages between a native chatroom and a Discord server. It also includes rate limiting and command handling for a better user experience.
+InterstellarChat Relay Bot is a fun and interactive bot designed 
+to relay messages between a native chatroom and a Discord server.
+It also includes rate limiting and command handling for a better user experience.
 
 ## Features
 
