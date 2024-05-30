@@ -1,5 +1,5 @@
   <pre>
-<marquee>
+<div style="word-wrap: break-word;">
 # InterstellarChat Relay Bot
 
 InterstellarChat Relay Bot is a fun and interactive bot designed 
@@ -17,7 +17,8 @@ It also includes rate limiting and command handling for a better user experience
 
 - Node.js and npm: Make sure Node.js and npm are installed.
 - Lua: Ensure Lua is installed on your system.
-- Required npm Packages: Install `discord.js`, `ws`, `@permaweb/aoconnect`, `fs`, `express`, and `express-rate-limit`.
+- Required npm Packages:
+    Install `discord.js`, `ws`, `@permaweb/aoconnect`, `fs`, `express`, and `express-rate-limit`.
 
 ## Installation
 
@@ -118,7 +119,7 @@ Send a message in the specified Discord channel and check if it gets relayed to 
 
 - `!joke`: Get a random joke.
 - `!quote`: Get a random motivational quote.
-</marquee>
+</div>
 <div style="text-align: center;">
   <pre>
           _____                   _______                   _____
