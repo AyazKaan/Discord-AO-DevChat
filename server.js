@@ -27,8 +27,8 @@ const walletData = JSON.parse(readFileSync(walletFilePath).toString());
 // Setup express rate limiting
 const limiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 minutes
-  max: 5000, // Limit each IP to 5000 requests per windowMs
-  message: '🚀 Whoa there, space cowboy! You have exceeded the 5000 requests in 10 minutes limit. Take a breather and try again soon!',
+  max: 10000, // Limit each IP to 10000 requests per windowMs
+  message: '🚀 Whoa there, space cowboy! You have exceeded the 50000 requests in 10 minutes limit. Take a breather and try again soon!',
   headers: true,
 });
 
