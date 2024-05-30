@@ -40,7 +40,6 @@ InterstellarChat Relay Bot is a fun and interactive bot designed to relay messag
 /root/InterstellarChatRelayBot/src/
 |-- server.js
 |-- messageCapture.js
-|-- process.lua
 |-- client.lua
 |-- chatroom.lua
 |-- router.lua
@@ -59,8 +58,6 @@ Load the required Lua scripts in the AOS terminal:
 .load /root/InterstellarChatRelayBot/src/client.lua
 
 .load /root/InterstellarChatRelayBot/src/chatroom.lua
-
-.load /root/InterstellarChatRelayBot/src/process.lua
 
 
 ### Step 2: Register and Join the Channel
