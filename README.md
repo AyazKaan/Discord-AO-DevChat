@@ -1,6 +1,6 @@
 <div>
-## InterstellarChat Relay Bot
 
+## InterstellarChat Relay Bot
 
 InterstellarChat Relay Bot is a fun and interactive bot designed 
 to relay messages between a native chatroom and a Discord server.
