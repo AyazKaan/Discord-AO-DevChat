@@ -95,8 +95,8 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 
 - `!joke`: Get a random joke.
 - `!quote`: Get a random motivational quote.
-`Say("!joke", "GalacticRoom")`
-`Say("!quote", "GalacticRoom")`
+- `Say("!joke", "GalacticRoom")`
+- `Say("!quote", "GalacticRoom")`
 </div>
 
 <div style="text-align: center;">
