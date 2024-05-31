@@ -7,10 +7,12 @@ const rateLimit = require('express-rate-limit');
 const express = require('express');
 const path = require('path');
 const app = express();
+const axios = require('axios');
 
 // Configuration
-const botToken = process.env.DISCORD_BOT_TOKEN;
+const botToken = process.env.DISCORD_BOT_TOKEN; //// Discord bot Token
 const discordChannelId = process.env.DISCORD_CHANNEL_ID; // Discord channel ID
+const openWeatherApiKey = process.env.OPENWEATHER_API_KEY; // OpenWeather API Key
 
 if (!botToken) {
   console.error('🚨 Uh-oh! DISCORD_BOT_TOKEN is not defined in the .env file.');
@@ -84,7 +86,7 @@ async function forwardMessageToInterstellarChat(messageData, lang = 'en') {
       tags: [
         { name: 'Action', value: 'BeamToInterstellarChat' },
         { name: 'Content', value: content },
-        { name: 'Sender', value: user },
+        { name: 'Sender', value: user }, // User name tag added here
         { name: 'Language', value: lang }, // Add language tag
       ],
       signer,
@@ -112,54 +114,111 @@ discordClient.once('ready', () => {
 discordClient.login(botToken).catch(console.error);
 
 function initiateWebSocketServer() {
-    const wsServer = new WebSocket.Server({ port: 8080 });
-  
-    wsServer.on('connection', ws => {
-      console.log('🌐 WebSocket connection established. Ready to receive transmissions!');
-  
-      ws.on('message', incomingMessage => {
-        const parsedMessage = JSON.parse(incomingMessage.toString());
-        const messageContent = parsedMessage.content;
-        const command = parsedMessage.command;
-        const lang = parsedMessage.lang || 'en';
-        const userId = parsedMessage.userId || 'aos-term'; // Default userId to 'aos-term' if not provided
-  
-        console.log('📡 Incoming transmission:', messageContent);
-  
-        const channel = discordClient.channels.cache.get(discordChannelId);
-        if (channel) {
-          if (command === '!joke' || command === '!quote') {
-            handleCommand(command, channel, lang, userId);
-          } else if (command === '!setlang') {
-            console.log(`🌐 Received !setlang command: ${lang}`);
-            if (lang === 'en' || lang === 'tr') {
-              userLanguage[userId] = lang;
-              saveUserLanguagePreferences();
-              channel.send(`Language set to ${lang === 'en' ? 'English' : 'Turkish'}`);
-            } else {
-              channel.send('Invalid language. Use !setlang en or !setlang tr');
-            }
+  const wsServer = new WebSocket.Server({ port: 8080 });
+
+  wsServer.on('connection', ws => {
+    console.log('🌐 WebSocket connection established. Ready to receive transmissions!');
+
+    ws.on('message', incomingMessage => {
+      const parsedMessage = JSON.parse(incomingMessage.toString());
+      const messageContent = parsedMessage.content;
+      const command = parsedMessage.command;
+      const lang = parsedMessage.lang || 'en';
+      const userId = parsedMessage.userId || 'aos-term'; // Default userId to 'aos-term' if not provided
+
+      console.log('📡 Incoming transmission:', messageContent);
+
+      const channel = discordClient.channels.cache.get(discordChannelId);
+      if (channel) {
+        if (command === '!joke' || command === '!quote') {
+          handleCommand(command, channel, lang, userId);
+        } else if (command === '!setlang') {
+          console.log(`🌐 Received !setlang command: ${lang}`);
+          if (lang === 'en' || lang === 'tr') {
+            userLanguage[userId] = lang;
+            saveUserLanguagePreferences();
+            channel.send(`Language set to ${lang === 'en' ? 'English' : 'Turkish'}`);
           } else {
-            channel.send(messageContent)
-              .then(() => {
-                console.log('📤 Message sent to Discord');
-                forwardMessageToInterstellarChat({ author: { username: 'RelayBot' }, content: messageContent, _fromDevChat: true }, lang);
-              })
-              .catch(console.error);
+            channel.send('Invalid language. Use !setlang en or !setlang tr');
+          }
+        } else if (command === '!weather') {
+          handleWeatherCommand(channel);
+        } else if (command.startsWith('!price')) {
+          const [, coin] = command.split(' ');
+          if (coin) {
+            fetchCryptoPrice(coin.toUpperCase()).then(priceMessage => {
+              channel.send(priceMessage);
+            }).catch(err => {
+              console.error('Error fetching crypto price:', err);
+              channel.send('Failed to fetch price.');
+            });
+          } else {
+            channel.send('Please specify a coin (e.g., !price btc).');
           }
         } else {
-          console.error('❌ Oops! Discord channel not found.');
+          channel.send(messageContent)
+            .then(() => {
+              console.log('📤 Message sent to Discord');
+              forwardMessageToInterstellarChat({ author: { username: 'RelayBot' }, content: messageContent, _fromDevChat: true }, lang);
+            })
+            .catch(console.error);
         }
-      });
-  
-      ws.on('close', () => {
-        console.log('🔌 WebSocket connection closed. Awaiting new transmissions.');
-      });
+      } else {
+        console.error('❌ Oops! Discord channel not found.');
+      }
     });
-  
-    console.log('🌌 WebSocket server started on port 8080. Ready for cosmic communication! 🚀');
+
+    ws.on('close', () => {
+      console.log('🔌 WebSocket connection closed. Awaiting new transmissions.');
+    });
+  });
+
+  console.log('🌌 WebSocket server started on port 8080. Ready for cosmic communication! 🚀');
+}
+
+async function handleWeatherCommand(channel) {
+  const weatherMessage = await fetchWeather();
+  channel.send(weatherMessage);
+}
+
+async function fetchWeather() {
+  const apiKey = process.env.OPENWEATHER_API_KEY; // Ensure this is set in your .env file
+  const city = "Antarctica";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  try {
+    const response = await axios.get(url);
+    const temp = response.data.main.temp;
+    const feelsLike = response.data.main.feels_like;
+    const weatherDescription = response.data.weather[0].description;
+    const windSpeed = response.data.wind.speed;
+    return `**The current temperature in ${city} is ${temp}°C. Feels like ${feelsLike}°C. ${capitalizeFirstLetter(weatherDescription)}. Wind speed: ${windSpeed} m/s.**`;
+  } catch (error) {
+    console.error('Failed to fetch weather data:', error);
+    return 'Failed to fetch weather data.';
   }
-  
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+async function fetchCryptoPrice(coin) {
+  const apiKey = process.env.COINAPI_API_KEY;
+  const url = `https://rest.coinapi.io/v1/exchangerate/${coin}/USD`;
+  const headers = {
+    'X-CoinAPI-Key': apiKey
+  };
+
+  try {
+    const response = await axios.get(url, { headers });
+    const price = response.data.rate;
+    return `**The current price of ${coin} is $${price.toFixed(2)}.**`;
+  } catch (error) {
+    console.error(`Failed to fetch ${coin} price:`, error);
+    return `Failed to fetch ${coin} price.`;
+  }
+}
 
 function handleCommand(command, channel, lang, userId) {
   const userLang = userLanguage[userId] || lang;
@@ -197,7 +256,7 @@ function handleCommand(command, channel, lang, userId) {
   }
 }
 
-discordClient.on('messageCreate', message => {
+discordClient.on('messageCreate', async message => {
   if (message.author.bot) return;
 
   const userId = message.author.id;
@@ -227,6 +286,22 @@ discordClient.on('messageCreate', message => {
   // Automatically respond to !quote command
   if (message.content === '!quote') {
     handleCommand('!quote', message.channel, lang, userId);
+  }
+
+  // Respond to !weather command
+  if (message.content === '!weather') {
+    handleWeatherCommand(message.channel);
+  }
+
+  // Respond to !arprice command for Arweave price
+  if (message.content.startsWith('!price')) {
+    const [, coin] = message.content.split(' ');
+    if (coin) {
+      const priceMessage = await fetchCryptoPrice(coin.toUpperCase());
+      message.channel.send(priceMessage);
+    } else 
+      message.channel.send('**Please specify a coin (e.g., !price btc).**');
+    
   }
 
   console.log(`💬 Message from ${message.author.username}: ${message.content}`);
