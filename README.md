@@ -8,11 +8,12 @@ It also includes rate limiting and command handling for a better user experience
 
 ## Features
 
-- Relay messages between GalacticRoom and Discord
-- Rate limiting to prevent spam
+- Rate limiting to prevent spam.
 - Users can select the language preferences for commands in English and Turkish.
-- Fun and interactive commands like `!joke` and `!quote`
-- Themed logging and messages for an engaging experience
+- Fun and interactive commands like `!joke`, `!quote`, `!weather`, and `!price`.
+- Themed logging and messages for an engaging experience.
+- Fetch current weather information.
+- Check real-time cryptocurrency prices.
 
 
 ## Installation
@@ -20,7 +21,7 @@ It also includes rate limiting and command handling for a better user experience
 1. Install the required npm packages:
 
 
-  ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit`
+  ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit axios dotenv`
 
 
 2. Create a `.env` file in the root directory with your Discord bot token and channel ID:
@@ -28,7 +29,8 @@ It also includes rate limiting and command handling for a better user experience
 
   - DISCORD_BOT_TOKEN=your-discord-bot-token
   - DISCORD_CHANNEL_ID=your-discord-channel-id
-
+  - OPENWEATHER_API_KEY=your-openweather-api-key
+  - COINAPI_API_KEY=your-coinapi-api-key
 
 3. Ensure your wallet file is located at `/root/.aos.json`.
 
@@ -92,6 +94,8 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 
 - `!joke`: Get a random joke. 
 - `!quote`: Get a random motivational quote. 
+- `!weather`: Get current weather information for a specified location.
+- `!price <coin>`: Get real-time price of a specified cryptocurrency (e.g., `!price ar`).
 - `Say("!joke", "GalacticRoom")`
 - `Say("!quote", "GalacticRoom")`
 - `!setlang [en|tr]`: Set your preferred language for bot responses.
