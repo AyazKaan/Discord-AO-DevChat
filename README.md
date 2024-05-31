@@ -92,7 +92,7 @@ Register the channel by sending a message to the router:
 - `Say("!joke", "GalacticRoom")`
 - `Say("!quote", "GalacticRoom")`
 - `!setlang [en|tr]`: Set your preferred language for bot responses.
--  Example usage: `!setlang en` / `!setlang tr` or in AOS `Say("!setlang en|tr", "GalacticRoom")`
+  Example usage: `!setlang en` / `!setlang tr` or in AOS `Say("!setlang en|tr", "GalacticRoom")`
 </div>
 
 
