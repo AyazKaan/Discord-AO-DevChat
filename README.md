@@ -36,7 +36,7 @@ It also includes rate limiting and command handling for a better user experience
 
 4. Ensure your wallet file is located at `/root/.aos.json`.
 
-<pre>/root/InterstellarChatRelayBot/src/
+<pre>/root/
 |-- server.js
 |-- messageCapture.js
 |-- client.lua
@@ -97,7 +97,7 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 Use the `Say` command in InterstellarChat to send a message to a room:
 
 
-`Say("Hello, this is a test message.", "GalacticRoom")`
+`Say("Hello, is anyone there?", "GalacticRoom")`
 
 
 #### Receiving the Message in Discord
