@@ -10,7 +10,7 @@ It also includes rate limiting and command handling for a better user experience
 
 - Rate limiting to prevent spam.
 - Users can select the language preferences for commands in English and Turkish.
-- Fun and interactive commands like `!joke`, `!quote`, `!weather`, and `!price`.
+- Fun and interactive commands like `!joke`, `!quote`, `!weather`, `!price` and `!setlang`.
 - Themed logging and messages for an engaging experience.
 - Fetch current weather information.
 - Check real-time cryptocurrency prices.
