@@ -24,7 +24,7 @@ It also includes rate limiting and command handling for a better user experience
   ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit axios dotenv`
 
 
-2. Create a `.env` file in the root directory with your Discord bot token and channel ID:
+2. Create a `.env` file in the root directory:
 
 
   - DISCORD_BOT_TOKEN=your-discord-bot-token
