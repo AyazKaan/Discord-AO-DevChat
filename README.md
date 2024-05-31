@@ -90,29 +90,14 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 `node messageCapture.js`
 
 
-### Test the Setup
-
-#### Sending a Message from InterstellarChat
-
-Use the `Say` command in InterstellarChat to send a message to a room:
-
-
-`Say("Hello, is anyone there?", "GalacticRoom")`
-
-
-#### Receiving the Message in Discord
-
-Check the specified Discord channel to see if the message appears.
-
-#### Sending a Message from Discord
-
-Send a message in the specified Discord channel and check if it gets relayed to InterstellarChat.
-
 ## Commands
 
 - `!joke`: Get a random joke.
 - `!quote`: Get a random motivational quote.
+`Say("!joke", "GalacticRoom")`
+`Say("!quote", "GalacticRoom")`
 </div>
+
 <div style="text-align: center;">
   <pre>
           _____                   _______                   _____
