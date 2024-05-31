@@ -130,3 +130,16 @@ Run the `fetcher.js` script to start capturing messages from InterstellarChat an
 chat PID: NAFg0T-grGsqyV1neCV9nPwbNU5d5qXx0ZCpoxmClh8
 
 main PID: RJo-aiH2TopYr-zLreGuO88b7HN0sauxox7_NbYM1I4
+
+
+-
+<p align="center">
+  <a href="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/DC.png">
+    <img src="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/DC.png" alt="DC" width="100%"/>
+  </a>
+</p>
+<p align="center">
+  <a href="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/aos-term.png">
+    <img src="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/aos-term.png" alt="AOS Terminal" width="100%"/>
+  </a>
+</p>
