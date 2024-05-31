@@ -102,37 +102,9 @@ Run the `fetcher.js` script to start capturing messages from InterstellarChat an
 -  Example usage: `!setlang en` / `!setlang tr` or in AOS `Say("!setlang en|tr", "GalacticRoom")`
 </div>
 
-<div style="text-align: center;">
-  <pre>
-          _____                   _______                   _____
-         /\    \                 /::\    \                 /\    \
-        /::\    \               /::::\    \               /::\    \
-       /::::\    \             /::::::\    \             /::::\    \
-      /::::::\    \           /::::::::\    \           /::::::\    \
-     /:::/\:::\    \         /:::/~~\:::\    \         /:::/\:::\    \
-    /:::/__\:::\    \       /:::/    \:::\    \       /:::/__\:::\    \
-   /::::\   \:::\    \     /:::/    / \:::\    \      \:::\   \:::\    \
-  /::::::\   \:::\    \   /:::/____/   \:::\____\   ___\:::\   \:::\    \
- /:::/\:::\   \:::\    \ |:::|    |     |:::|    | /\   \:::\   \:::\    \
-/:::/  \:::\   \:::\____\|:::|____|     |:::|    |/::\   \:::\   \:::\____\
-\::/    \:::\  /:::/    / \:::\    \   /:::/    / \:::\   \:::\   \::/    /
- \/____/ \:::\/:::/    /   \:::\    \ /:::/    /   \:::\   \:::\   \/____/
-          \::::::/    /     \:::\    /:::/    /     \:::\   \:::\    \
-           \::::/    /       \:::\__/:::/    /       \:::\   \:::\____\
-           /:::/    /         \::::::::/    /         \:::\  /:::/    /
-          /:::/    /           \::::::/    /           \:::\/:::/    /
-         /:::/    /             \::::/    /             \::::::/    /
-        /:::/    /               \::/____/               \::::/    /
-        \::/    /                 ~~                      \::/    /
-         \/____/                                           \/____/
-</pre>
-</div>
-chat PID: NAFg0T-grGsqyV1neCV9nPwbNU5d5qXx0ZCpoxmClh8
 
-main PID: RJo-aiH2TopYr-zLreGuO88b7HN0sauxox7_NbYM1I4
+## main PID: RJo-aiH2TopYr-zLreGuO88b7HN0sauxox7_NbYM1I4
 
-
--
 <p align="center">
   <a href="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/DC.png">
     <img src="https://raw.githubusercontent.com/AyazKaan/Discord-AO-DevChat/main/img/DC.png" alt="DC" width="100%"/>
