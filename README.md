@@ -10,15 +10,10 @@ It also includes rate limiting and command handling for a better user experience
 
 - Relay messages between GalacticRoom and Discord
 - Rate limiting to prevent spam
+- Users can select the language preferences for commands in English and Turkish.
 - Fun and interactive commands like `!joke` and `!quote`
 - Themed logging and messages for an engaging experience
 
-## Prerequisites
-
-- Node.js and npm: Make sure Node.js and npm are installed.
-- Lua: Ensure Lua is installed on your system.
-- Required npm Packages:
-    Install `discord.js`, `ws`, `@permaweb/aoconnect`, `fs`, `express`, and `express-rate-limit`.
 
 ## Installation
 
@@ -40,6 +35,7 @@ It also includes rate limiting and command handling for a better user experience
 <pre>/root/
 |-- server.js
 |-- messageCapture.js
+|-- userLanguage.json
 |-- client.lua
 |-- chatroom.lua
 |-- router.lua
@@ -93,10 +89,12 @@ Run the `messageCapture.js` script to start capturing messages from Interstellar
 
 ## Commands
 
-- `!joke`: Get a random joke.
-- `!quote`: Get a random motivational quote.
+- `!joke`: Get a random joke. 
+- `!quote`: Get a random motivational quote. 
 - `Say("!joke", "GalacticRoom")`
 - `Say("!quote", "GalacticRoom")`
+- `!setlang [en|tr]`: Set your preferred language for bot responses.
+-  Example usage: `!setlang en` / `!setlang tr` or in AOS `Say("!setlang en|tr", "GalacticRoom")`
 </div>
 
 <div style="text-align: center;">
