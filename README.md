@@ -65,26 +65,19 @@ Register the channel by sending a message to the router:
 
 `Join("GalacticRoom")`
 
-
-### Send a Test Message
-
-Send a test message to the joined channel:
+### Send a test message to the joined channel:
 
 
 `Say("Hello, can anyone hear me?", "GalacticRoom")`
 
 
-### Start the WebSocket Server
-
-Run the `bridgeDC.js` script to start the WebSocket server and log in the Discord bot:
+### Run the `bridgeDC.js` script to start the WebSocket server and log in the Discord bot:
 
 
 `node bridgeDC.js`
 
 
-### Start Capturing Messages from InterstellarChat
-
-Run the `fetcher.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
+### Run the `fetcher.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
 
 
 `node fetcher.js`
