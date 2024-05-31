@@ -2,7 +2,7 @@ const { results } = require('@permaweb/aoconnect');
 const WebSocket = require('ws');
 
 let lastMarker = '';
-const wsConnection = new WebSocket('ws://localhost:8080'); // Start WebSocket connection
+const wsConnection = new WebSocket('ws://localhost:8080');
 
 wsConnection.on('open', () => {
   console.log('🌟 WebSocket connection established. Ready for interstellar communication!');
