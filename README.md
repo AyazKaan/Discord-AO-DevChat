@@ -31,8 +31,8 @@ It also includes rate limiting and command handling for a better user experience
 2. Create a `.env` file in the root directory with your Discord bot token and channel ID:
 
 
-   DISCORD_BOT_TOKEN=your-discord-bot-token
-   DISCORD_CHANNEL_ID=your-discord-channel-id
+  - DISCORD_BOT_TOKEN=your-discord-bot-token
+  - DISCORD_CHANNEL_ID=your-discord-channel-id
 
 
 4. Ensure your wallet file is located at `/root/.aos.json`.
