@@ -39,6 +39,7 @@ It also includes rate limiting and command handling for a better user experience
 |-- client.lua
 |-- chatroom.lua
 |-- router.lua
+|-- .env
 </pre>
 
 ## Setup and Usage
