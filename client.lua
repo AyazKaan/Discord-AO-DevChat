@@ -200,7 +200,6 @@ Handlers.add(
         local msgContent = m.Data or "No message content"
         local senderName = m.Event or "Unknown sender"
 
-        -- Mesajı DevChat konsolunda göster
         print(DevChat.Colors.green .. "[" .. senderName .. "]: " .. DevChat.Colors.reset .. msgContent)
     end
 )
