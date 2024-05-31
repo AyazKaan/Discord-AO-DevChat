@@ -76,18 +76,18 @@ Send a test message to the joined channel:
 
 ### Start the WebSocket Server
 
-Run the `server.js` script to start the WebSocket server and log in the Discord bot:
+Run the `bridgeDC.js` script to start the WebSocket server and log in the Discord bot:
 
 
-`node server.js`
+`node bridgeDC.js`
 
 
 ### Start Capturing Messages from InterstellarChat
 
-Run the `messageCapture.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
+Run the `fetcher.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
 
 
-`node messageCapture.js`
+`node fetcher.js`
 
 
 ## Commands
