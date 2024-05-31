@@ -64,7 +64,7 @@ async function fetchMessagesFromInterstellarChat() {
       console.error('🌌 Error fetching messages from InterstellarChat:', error);
       console.error('🔍 Error details:', error.message);
     } finally {
-      setTimeout(fetchMessagesFromInterstellarChat, 5000);
+      setTimeout(fetchMessagesFromInterstellarChat, 10000);
     }
   }
   
