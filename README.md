@@ -22,11 +22,8 @@ It also includes rate limiting and command handling for a better user experience
 
 ## Installation
 
-1. Install the required npm packages:
-
-
-  ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit axios dotenv`
-
+1.  ` npm install discord.js ws @permaweb/aoconnect fs express express-rate-limit axios dotenv`
+<br>
 
 2. Create a `.env` file in the root directory:
 
@@ -35,57 +32,9 @@ It also includes rate limiting and command handling for a better user experience
   - DISCORD_CHANNEL_ID=your-discord-channel-id
   - OPENWEATHER_API_KEY=your-openweather-api-key
   - COINAPI_API_KEY=your-coinapi-api-key
-
-3. Ensure your wallet file is located at `/root/.aos.json`.
-
-<pre>/root/
-|-- bridgeDC.js
-|-- fetcher.js
-|-- userLanguage.json
-|-- client.lua
-|-- chatroom.lua
-|-- router.lua
-|-- .env
-</pre>
-
-## Setup and Usage
-
-Load the required Lua scripts in the AOS terminal:
-
-
-`.load /root/router.lua`
-
-`.load /root/client.lua`
-
-`.load /root/chatroom.lua`
-
-
-### Register and Join the Channel
-
-Register the channel by sending a message to the router:
-
-
-`ao.send({ Target = "xnkv_QpWqICyt8NpVMbfsUQciZ4wlm5DigLrfXRm8fY", Action = "Register", Name = "GalacticRoom" })`
-
-`Join("GalacticRoom")`
-
-### Send a test message to the joined channel:
-
-
-`Say("Hello, can anyone hear me?", "GalacticRoom")`
-
-
-### Run the `bridgeDC.js` script to start the WebSocket server and log in the Discord bot:
-
-
-`node bridgeDC.js`
-
-
-### Run the `fetcher.js` script to start capturing messages from InterstellarChat and sending them via WebSocket:
-
-
-`node fetcher.js`
-
+  - AOS_WALLET_PATH=/root/.aos.json
+  - GETTING_STARTED_PID=6I1JBBc9SOMtqFxlX7OoYgsMh7QeZk2fFwUCHTUqshg
+  - AOS_PID=
 
 ## Commands
 
